@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BackScreamer : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class BackScreamer : MonoBehaviour
     [SerializeField] private Canvas _screamerCanvas;
 
     private Camera _playerView;
+
+    public event UnityAction<BackScreamer> HadSeen;
 
     private void Start()
     {
@@ -24,6 +27,7 @@ public class BackScreamer : MonoBehaviour
         if (IsVisible(transform.position, Vector3.one, _playerView))
         {
             Instantiate(_screamerCanvas);
+            HadSeen?.Invoke(this);
             Destroy(gameObject);
         }
     }

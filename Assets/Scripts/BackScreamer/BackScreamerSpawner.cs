@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BackScreamerSpawner : MonoBehaviour
 {
@@ -11,9 +12,18 @@ public class BackScreamerSpawner : MonoBehaviour
     [Header("Prefab")]
     [SerializeField] private BackScreamer _template;
 
-    private void Start()
+    private Coroutine _spawner;
+
+    public event UnityAction<BackScreamer> Spawned;
+
+    private void OnEnable()
     {
-        StartCoroutine(SpawnLoop());
+        _spawner = StartCoroutine(SpawnLoop());
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(_spawner);
     }
 
     private IEnumerator SpawnLoop()
@@ -27,6 +37,8 @@ public class BackScreamerSpawner : MonoBehaviour
 
             var screamer = Instantiate(_template, spawnPosition, Quaternion.identity);
             screamer.Init(_playerView);
+
+            Spawned?.Invoke(screamer);
         }
     }
 }

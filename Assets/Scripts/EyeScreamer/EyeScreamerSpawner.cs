@@ -12,11 +12,17 @@ public class EyeScreamerSpawner : MonoBehaviour
     [SerializeField] private EyeScreamer _eyeScreamerTemplate;
 
     private EyeSpawnPosition _spawnPosition;
+    private Coroutine _spawner;
 
-    private void Start()
+    private void OnEnable()
     {
         _spawnPosition = new EyeSpawnPosition(_bound, _minDistance, _maxDistance);
-        StartCoroutine(SpawnLoop());
+        _spawner = StartCoroutine(SpawnLoop());
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(_spawner);
     }
 
     private IEnumerator SpawnLoop()

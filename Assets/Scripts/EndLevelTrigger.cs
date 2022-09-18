@@ -5,6 +5,7 @@ public class EndLevelTrigger : MonoBehaviour
 {
     [SerializeField] private BackScreamerSpawner _backScreamerSpawner;
     [SerializeField] private EyeScreamerSpawner _eyeScreamerSpawner;
+    [SerializeField] private FirstPersonController _firstPersonController;
 
     public event UnityAction LevelLost;
 
@@ -29,6 +30,7 @@ public class EndLevelTrigger : MonoBehaviour
 
         _backScreamerSpawner.enabled = false;
         _eyeScreamerSpawner.enabled = false;
+        _firstPersonController.enabled = false;
 
         LevelLost?.Invoke();
     }

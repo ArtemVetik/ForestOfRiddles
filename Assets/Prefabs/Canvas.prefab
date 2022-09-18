@@ -605,6 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerSight: {fileID: 0}
+  _firstPersonController: {fileID: 0}
 --- !u!114 &312317891
 MonoBehaviour:
   m_ObjectHideFlags: 0

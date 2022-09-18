@@ -8,9 +8,10 @@ using UnityEngine.UI;
 public class SightManager : MonoBehaviour
 {
     [SerializeField] private PlayerSight _playerSight;
+    [SerializeField] private FirstPersonController _firstPersonController;
     private CanvasGroup _canvasGroup;
     private LockCamera _lockCamera;
-    
+
     private void Awake()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
@@ -46,7 +47,7 @@ public class SightManager : MonoBehaviour
         _canvasGroup.blocksRaycasts = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
-        _lockCamera.enabled = true;
+        _firstPersonController.enabled = false;
     }
 
     private void CloseButtons()
@@ -56,7 +57,7 @@ public class SightManager : MonoBehaviour
         _canvasGroup.blocksRaycasts = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        _lockCamera.enabled = false;
+        _firstPersonController.enabled = true;
     }
 
 }

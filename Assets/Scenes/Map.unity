@@ -10357,7 +10357,7 @@ MonoBehaviour:
   _player: {fileID: 182759823}
   _minDistance: 100
   _maxDistance: 150
-  _spawnDelay: 10
+  _spawnDelay: 35
   _eyeScreamerTemplate: {fileID: 2616974513028405247, guid: e8d7e76b847bfbc418384e14473ef308, type: 3}
 --- !u!1001 &429697901
 PrefabInstance:
@@ -15918,7 +15918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerView: {fileID: 1588821561}
   _player: {fileID: 182759823}
-  _spawnDelay: 2
+  _spawnDelay: 150
   _template: {fileID: 8995292688576755978, guid: b6d4187cc53059c4486130818ad90280, type: 3}
 --- !u!1001 &678745969
 PrefabInstance:
@@ -32937,7 +32937,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1443721847
 MonoBehaviour:
@@ -34495,7 +34495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7148704329839453145, guid: 776d36164ca199b4fb835aca9aa5c156, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7148704329839453145, guid: 776d36164ca199b4fb835aca9aa5c156, type: 3}
       propertyPath: m_LocalPosition.x

@@ -15918,7 +15918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerView: {fileID: 1588821561}
   _player: {fileID: 182759823}
-  _spawnDelay: 20
+  _spawnDelay: 2
   _template: {fileID: 8995292688576755978, guid: b6d4187cc53059c4486130818ad90280, type: 3}
 --- !u!1001 &678745969
 PrefabInstance:

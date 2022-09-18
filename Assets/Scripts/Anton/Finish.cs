@@ -31,12 +31,14 @@ public class Finish : MonoBehaviour
     {
         _panelFinish.SetActive(true);
         _failLable.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void OnWin()
     {
         _panelFinish.SetActive(true);
         _winLable.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void OnRestartLevel()

@@ -25,7 +25,7 @@ public class Note : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent<Player>(out Player player))
+        if (collision.gameObject.TryGetComponent<PlayerTrigger>(out PlayerTrigger player))
         {
             Collected?.Invoke(_id, _sprite);
             Destroy(_gameObject);

@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bde3ea09eeb3140b1c3b20418fc874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playe: {fileID: 0}
+  _endLevelTrigger: {fileID: 0}
   _magazine: {fileID: 4369173346229527813}
   _winLable: {fileID: 4369173344810691569}
   _failLable: {fileID: 4369173344997518233}
@@ -1241,7 +1241,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &4369173345121695758
 MonoBehaviour:

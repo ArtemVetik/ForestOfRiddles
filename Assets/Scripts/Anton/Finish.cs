@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Finish : MonoBehaviour
 {
-    [SerializeField] private Player _playe;
+    [SerializeField] private EndLevelTrigger _endLevelTrigger;
     [SerializeField] private Magazine _magazine;
     [SerializeField] private GameObject _winLable;
     [SerializeField] private GameObject _failLable;
@@ -15,14 +15,14 @@ public class Finish : MonoBehaviour
 
     private void OnEnable()
     {
-        _playe.Died += OnFail;
+        _endLevelTrigger.LevelLost += OnFail;
         _magazine.Won += OnWin;
         _buttonRestart.onClick.AddListener(OnRestartLevel);
     }
 
     private void OnDisable()
     {
-        _playe.Died -= OnFail;
+        _endLevelTrigger.LevelLost -= OnFail;
         _magazine.Won -= OnWin;
         _buttonRestart.onClick.RemoveListener(OnRestartLevel);
     }

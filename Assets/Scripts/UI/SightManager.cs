@@ -36,8 +36,8 @@ public class SightManager : MonoBehaviour
 
     public void TryMark(int rotation)
     {
-        _playerSight.Mark(rotation);
         CloseButtons();
+        _playerSight.Mark(rotation);
     }
 
     private void ShowButtons()

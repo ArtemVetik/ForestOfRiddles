@@ -1393,6 +1393,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 24be8e1643b8a474fbb57fcda8a1c454, type: 3}
   m_PrefabInstance: {fileID: 358646019}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &428821174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428821175}
+  - component: {fileID: 428821176}
+  m_Layer: 0
+  m_Name: EyeScreamerSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &428821175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428821174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &428821176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428821174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6fbf1b5b2d8944c9eba792f3f51ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bound:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 500, y: 500, z: 500}
+  _player: {fileID: 4459864849590813348}
+  _minDistance: 100
+  _maxDistance: 150
+  _spawnDelay: 60
+  _eyeScreamerTemplate: {fileID: 2616974513028405247, guid: e8d7e76b847bfbc418384e14473ef308, type: 3}
 --- !u!1001 &440370669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6862,3 +6913,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd03b68defc4e849aea5432e66ec43f, type: 3}
+--- !u!4 &4459864849590813348 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4239265918258868230, guid: 0dd03b68defc4e849aea5432e66ec43f, type: 3}
+  m_PrefabInstance: {fileID: 518048749665252002}
+  m_PrefabAsset: {fileID: 0}

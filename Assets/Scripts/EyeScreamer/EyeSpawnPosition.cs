@@ -16,7 +16,6 @@ public class EyeSpawnPosition
     public bool TryGenerateSpawnPosition(Transform point, out Vector3 position)
     {
         var planeForward = new Vector3(point.forward.x, 0, point.forward.z).normalized;
-
         var nearestDistance = point.position + planeForward * _minDistance;
         var largestDistance = point.position + planeForward * _maxDistance;
 
